@@ -1,2 +1,2 @@
 # BSDM-HAD
-Code of BSDM: Background Suppression Diffusion Model for Hyperspectral Anomaly Detection
+Code for BSDM: Background Suppression Diffusion Model for Hyperspectral Anomaly Detection
