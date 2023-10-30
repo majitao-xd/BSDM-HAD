@@ -1,4 +1,16 @@
 # BSDM-HAD
-Code for BSDM: Background Suppression Diffusion Model for Hyperspectral Anomaly Detection
+This is the official repository for “BSDM: Background Suppression Diffusion Model for Hyperspectral Anomaly Detection”.
+## Abstract
 
-Current status: Organizing code
+## Getting Started
+
+### Requirements
+
+- torch
+- numpy
+- scipy
+- matplotlib
+
+### Train
+
+`python train.py`
