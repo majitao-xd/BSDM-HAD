@@ -69,18 +69,18 @@ def channel_align(x, target_channels):
         return [x]
 
     x_new = []
-    if target_channels / channels < 2:
+    if channels / target_channels < 2:
         if channels < target_channels:
-            right = int((channels- target_channels) / 2)
-            left = int(channels - target_channels - right)
-            x = np.pad(x, ((0, 0), (0, 0), (0,left + right)), mode='reflect')
+            right = int((target_channels- channels) / 2)
+            left = int(target_channels - channels - right)
+            x = np.pad(x, ((0, 0), (0, 0), (left, right)), mode='reflect')
         elif channels > target_channels:
             c = np.sort(np.random.choice(channels, target_channels, replace=False))
             x = x[:,:,c]
         x_new.append(x)
 
     else:
-        n = math.floor(target_channels / channels)
+        n = math.floor(channels / target_channels)
         c = np.sort(np.random.choice(channels, target_channels * n, replace=False))
         for i in range(n):
             x_new.append(x[:, :, c[target_channels * i:target_channels * (i+1)]])
